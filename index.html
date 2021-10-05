@@ -2,27 +2,64 @@
     <title>The Sparkfly Agency</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
         body {
+            background-color: black;
             background-image: url("bg.jpg");
             font-family: 'Source Code Pro', monospace;
             color: white;
         }
+        h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 48px;
+            line-height: 1;
+        }
         a {
             color: yellow;
+            text-decoration: none;
         }
         div.card {
             position: absolute;
+            text-align: center;
+            width: 33%;
             top: 50%;
             left: 50%;
             margin-right: -50%;
-            transform: translate(-50%, 50%)
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Welcome to the Spark-fly Agency.</h1>
-        <p>We do web design and software engineering.</p>
-        <p><a href="mailto:info@spark-fly.net">Get started with us!</a></p>
+    <div class="card" id="main">
+        <h1>We do web design and software engineering.</h1>
+        <p>Welcome to The Sparkfly Agency.</p>
+        <p>
+            <a href="mailto:info@spark-fly.net">Get in touch</a> or
+            <a href="javascript:switch_div(false)">learn more</a>.
+        </p>
     </div>
+    <div class="card" id="about" style="display:none">
+        <h1>The highest quality work.</h1>
+        <p>We cut our teeth at the top engineering firms. Now we are looking to
+           do something on the side and give back. One third of our revenue will
+           go towards LGBTQ+ charities.
+        </p>
+        <p>
+            <a href="mailto:info@spark-fly.net">Get in touch</a> or
+            <a href="javascript:switch_div(true)">return to homepage</a>.
+        </p>
+    </div>
+    <script>
+        function switch_div(show_main){
+            var main = document.getElementById("main");
+            var about = document.getElementById("about");
+            if(show_main){
+                main.style.display = "block";
+                about.style.display = "none";
+            } else {
+                main.style.display = "none";
+                about.style.display = "block";
+            }
+        }
+    </script>
 </body>
