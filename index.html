@@ -1,15 +1,14 @@
 <head>
     <title>The Sparkfly Agency</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
 
         body {
             background-color: black;
-            background-image: url('bg.jpg');
-            font-family: 'IBM Plex Sans', monospace;
+            /* background-image: url('bg.jpg'); */
+            font-family: 'DM Sans', Helvetica, Arial, sans-serif;
             font-weight: 400;
-            color: black;
+            color: white;
         }
 
         h1 {
@@ -19,10 +18,8 @@
         }
 
         a {
-            display: inline-block;
-            background: yellow;
-            color: black;
-            padding: 0 4px;
+            text-shadow: 0px 0px 17px wheat;
+            color: #ecc45e;
             text-decoration: none;
             font-weight: 500;
         }
@@ -39,13 +36,32 @@
             left: 50%;
             margin-right: -50%;
             transform: translate(-50%, -50%);
+            width: 50%;
+            max-width: 500px;
+        }
+
+        .firefly {
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            background-color: #ecc45e;
+            box-shadow: 0px 0px 17px 2px wheat;
+            border-radius: 50%;
+        }
+
+        .container {
+            /*   width: 30%; */
+            margin: 0 auto;
+            height: 100vh;
+            position: relative;
         }
     </style>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
 <body>
-    <div id="home_wave">
+    <div class="container">
         <div class="card" id="main">
             <h1>We do web design and software engineering.</h1>
             <p>Welcome to Sparkfly Agency.</p>
