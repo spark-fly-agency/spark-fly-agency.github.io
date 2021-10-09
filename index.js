@@ -48,3 +48,14 @@ function flyTheFirefly(elm) {
       onCompleteParams: [elm],
     });
 }
+
+function switch_div(show_main) {
+    if (show_main) {
+        var in_id ='#main';
+        var out_id = '#about';
+    } else {
+        var in_id = '#about';
+        var out_id = '#main';
+    }
+    $(out_id).fadeOut("fast", function(){ $(in_id).fadeIn("slow")})
+}

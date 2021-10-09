@@ -2,32 +2,26 @@
     <title>The Sparkfly Agency</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
-
         body {
             background-color: black;
-            /* background-image: url('bg.jpg'); */
             font-family: 'DM Sans', Helvetica, Arial, sans-serif;
             font-weight: 400;
             color: white;
         }
-
         h1 {
             font-size: 48px;
             line-height: 1;
             font-weight: inherit;
         }
-
         a {
             text-shadow: 0px 0px 17px wheat;
             color: #ecc45e;
             text-decoration: none;
             font-weight: 500;
         }
-
         p {
             line-height: 1.5em;
         }
-
         div.card {
             position: absolute;
             text-align: center;
@@ -39,7 +33,6 @@
             width: 50%;
             max-width: 500px;
         }
-
         .firefly {
             width: 4px;
             height: 4px;
@@ -48,12 +41,18 @@
             box-shadow: 0px 0px 17px 2px wheat;
             border-radius: 50%;
         }
-
         .container {
-            /*   width: 30%; */
             margin: 0 auto;
             height: 90vh;
             position: relative;
+        }
+        @media screen and (max-width: 700px) {
+            h1 {
+                font-size: 80px;
+            }
+            p {
+                font-size: 38px;
+            }
         }
     </style>
 </head>
@@ -64,14 +63,14 @@
     <div class="container">
         <div class="card" id="main">
             <h1>We do web design and software engineering.</h1>
-            <p>Welcome to Sparkfly Agency.</p>
+            <p>Welcome to Sparkfly.</p>
             <p>
                 <a href="mailto:info@spark-fly.net">Get in touch</a> or
                 <a href="javascript:switch_div(false)">learn more</a>.
             </p>
         </div>
         <div class="card" id="about" style="display: none">
-            <h1>The highest quality work.</h1>
+            <h1>Work with top engineers.</h1>
             <p>
                 We cut our teeth at the top engineering firms. Now we are looking to do
                 something on the side and give back. One third of our revenue will go
@@ -83,18 +82,5 @@
             </p>
         </div>
     </div>
-    <script>
-        function switch_div(show_main) {
-            var main = document.getElementById('main');
-            var about = document.getElementById('about');
-            if (show_main) {
-                main.style.display = 'block';
-                about.style.display = 'none';
-            } else {
-                main.style.display = 'none';
-                about.style.display = 'block';
-            }
-        }
-    </script>
     <script src="index.js"></script>
 </body>
